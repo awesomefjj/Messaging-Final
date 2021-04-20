@@ -1,1 +1,10 @@
-<h1>Tenants</h1>
+<div class="d-flex justify-content-between align-items-baseline">
+    <h1>Tenants</h1>
+    <%= link_to '新增', new_tenant_path, class: 'btn btn-success px-5' %>
+</div>
+
+<div class="card-deck">
+    <% (0..2).each do |x| %>
+        <%= render 'tenant' %>
+    <% end %>
+</div>

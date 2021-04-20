@@ -9,4 +9,6 @@ Rails.application.routes.draw do
       get :search, on: :collection
     end
   end
+
+  root to: 'dashboards#show'
 end
