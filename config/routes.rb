@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resource :dashboard, only: %i[show]
+  resources :messages, only: %i[index show] do
+    get :search, on: :collection
+  end
+  resources :tenants do
+    get :search, on: :collection
+    resources :messages, only: %i[index new create] do
+      get :search, on: :collection
+    end
+  end
 end
