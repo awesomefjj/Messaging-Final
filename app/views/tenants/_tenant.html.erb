@@ -1,18 +1,17 @@
-<div class="card" style="width: 18rem;">
-    <img src="<%= image_path 'samples/1.jpg' %>" class="card-img-top" height="120">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">
-          <%= link_to '发送记录', tenant_messages_path(tenant_id: 1) %>
-        </li>
-    </ul>
-    <div class="card-body">
-        <%= link_to "修改", edit_tenant_path(id: 1), class: 'card-link' %>
-        <%= link_to "删除", tenant_path(id: 1), method: :delete, 'data-confirm' => '确认要删除吗?', class: 'card-link text-danger' %>
-    </div>
+<div class="card col-3 mt-4 mr-2" style="width: 18rem;">
+  <img src="<%= image_path 'samples/tenant_pic.png' %>" class="card-img-top" height="160">
+  <div class="card-body">
+    <h5 class="card-title">用户名</h5>
+    <p class="card-text">最新发送的消息展示？</p>
   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <%= link_to '发送记录' , tenant_messages_path(tenant_id: 1) %>
+    </li>
+  </ul>
+  <div class="card-body">
+    <%= link_to "修改" , edit_tenant_path(id: 1), class: 'card-link' %>
+      <%= link_to "删除" , tenant_path(id: 1), method: :delete, 'data-confirm'=> '确认要删除吗?', class: 'card-link text-danger'
+        %>
+  </div>
+</div>
