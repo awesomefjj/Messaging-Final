@@ -5,11 +5,6 @@
         <%= render 'informations' %>
             <% end %>
 </div>
-<div class="d-flex flex-row justify-content-around">
-    <%= render 'number' %>
-</div>
-<div style="height:200px;">
-</div>
 <div class="container d-flex">
     <img src="<%= image_path 'samples/line_chart.png' %>" class="col-8">
     <div class="card col-4">
@@ -17,7 +12,13 @@
             <span class="d-block font-14 font-weight-500 text-dark">本日发送量</span>
             <div class="display-3 font-weight-500 text-dark">48</div>
         </div>
-
     </div>
-
+</div>
+<div class="d-flex flex-row justify-content-around">
+    <%= render 'number' %>
+</div>
+<div class="container mt-5" sytle="height: 200px;">
+    <div class="d-flex align-items-end justify-content-center ">
+        Designed and Developed by Jeffery.
+    </div>
 </div>
