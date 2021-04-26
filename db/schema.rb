@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_26_021232) do
+ActiveRecord::Schema.define(version: 2021_04_26_035500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,10 +22,17 @@ ActiveRecord::Schema.define(version: 2021_04_26_021232) do
     t.string "title"
     t.text "content"
     t.string "receive_id"
-    t.datetime "create_t"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    
+    t.datetime "create_t"
+  end
+
+  create_table "tenants", force: :cascade do |t|
+    t.string "tenant_id"
+    t.string "tenant_name"
+    t.string "phone_num"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

@@ -1,17 +1,18 @@
+<% @tenants.each do |t| %>
 <div class="card col-3 mt-4 mr-2" style="width: 18rem;">
   <img src="<%= image_path 'samples/tenant_pic.png' %>" class="card-img-top" height="160">
   <div class="card-body">
-    <h5 class="card-title">用户名</h5>
+    <h5 class="card-title"><%= t.tenant_name %></h5>
     <p class="card-text">最新发送的消息展示？</p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">
-      <%= link_to '发送记录' , tenant_messages_path(tenant_id: 1) %>
+      <%= link_to '发送记录' , tenant_messages_path(tenant_id: t.tenant_id) %>
     </li>
   </ul>
   <div class="card-body">
     <%= link_to "修改" , edit_tenant_path(id: 1), class: 'card-link' %>
-      <%= link_to "删除" , tenant_path(id: 1), method: :delete, 'data-confirm'=> '确认要删除吗?', class: 'card-link text-danger'
-        %>
-  </div>
+      <%= link_to "删除" , tenant_path(id: 1), method: :delete, 'data-confirm'=> '确认要删除吗?', class: 'card-link text-danger' %>
+    </div>
 </div>
+<% end %>

@@ -1,0 +1,20 @@
+<%= form_with(model: tenant) do |form| %>
+
+  <div class="field">
+    <%= form.label :tenant_id %>
+    <%= form.text_field :tenant_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tenant_name %>
+    <%= form.text_field :tenant_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_num %>
+    <%= form.text_field :phone_num %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
 def index
-    @notifications = Notification.all
+    @notifications = Notification.where("tenant_id =?", params[:tenant_id] )
 end
 end
