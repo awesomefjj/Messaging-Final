@@ -49,3 +49,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #chart.js cannot use yarn
 gem 'chart-js-rails'
+
+#ruby to js
+gem 'gon'
+gem 'rabl-rails'

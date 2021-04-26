@@ -5,41 +5,58 @@
         <h6 class="card-subtitle">消息搜索展示</h6>
         <div class="table-responsive">
             <table class="table">
-            <thead class="text-white" style="background-color: #36bea6;">
-                <tr>
-                    <th>#</th>
-                    <th>User</th>
-                    <th>Title</th>
-                    <th>date</th>
-                    <th>#</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Jack</td>
-                    <td>this is a message</td>
-                    <td>23/4/2021</td>
-                    <td><%= link_to "详情", message_path(:id => 1), class: "stretched-link", class:"btn btn-outline-primary" %></td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Jack</td>
-                    <td>this is a message</td>
-                    <td>23/4/2021</td>
-                    <td><%= link_to "详情", messages_url, class: "stretched-link", class:"btn btn-outline-primary" %></td>
+                <thead class="text-white" style="background-color: #36bea6;">
 
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>Jack</td>
-                    <td>this is a message</td>
-                    <td>23/4/2021</td>
-                    <td><%= link_to "详情", messages_url, class: "stretched-link", class:"btn btn-outline-primary" %></td>
+                        <tr>
+                        <th>Tenant</th>
+                        <th>Tenant name</th>
+                        <th>Phone num</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Receive</th>
+                        <th>Time</th>
+                        <th colspan="3"></th>
+                        </tr>
+                </thead>
 
-                </tr>
-            </tbody>
-        </table>
+                <tbody>
+                    <% @notifications.each do |notification| %>
+                        <tr>
+                            <td>
+                                <%= notification.tenant_id %>
+                            </td>
+                            <td>
+                                <%= notification.tenant_name %>
+                            </td>
+                            <td>
+                                <%= notification.phone_num %>
+                            </td>
+                            <td>
+                                <%= notification.title %>
+                            </td>
+                            <td>
+                                <%= notification.content %>
+                            </td>
+                            <td>
+                                <%= notification.receive_id %>
+                            </td>
+                            <td>
+                                <%= notification.create_t.to_date %>
+                            </td>
+                            <td>
+                                <%= link_to 'Show' , notification %>
+                            </td>
+                            <td>
+                                <%= link_to 'Edit' , edit_notification_path(notification) %>
+                            </td>
+                            <td>
+                                <%= link_to 'Destroy' , notification, method: :delete, data: { confirm: 'Are you sure?'
+                                    } %>
+                            </td>
+                        </tr>
+                        <% end %>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -1,9 +1,13 @@
+<div class="list-group">
+    <% @notifications.each do |f| %>
 <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">文章标题</h5>
-        <small class="text-muted">23 May 2021</small>
+        <h5 class="mb-1"><%= f.title %></h5>
+        <small class="text-muted"><%= f.create_t.to_date.to_formatted_s(:iso8601)  %></small>
     </div>
-    <p class="mb-1">文章内容
+    <p class="mb-1"><%= f.content %>
     </p>
-    <small class="text-muted">创作者：小明</small>
+    <small class="text-muted"><%= f.tenant_name %></small>
 </a>
+<% end %>
+</div>
