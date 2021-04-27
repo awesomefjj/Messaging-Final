@@ -53,3 +53,6 @@ gem 'chart-js-rails'
 #ruby to js
 gem 'gon'
 gem 'rabl-rails'
+
+#翻页工具
+gem 'kaminari', '~> 1.2', '>= 1.2.1'

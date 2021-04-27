@@ -3,7 +3,7 @@
   <img src="<%= image_path 'samples/tenant_pic.png' %>" class="card-img-top" height="160">
   <div class="card-body">
     <h5 class="card-title"><%= t.tenant_name %></h5>
-    <p class="card-text">最新发送的消息展示？</p>
+    <p class="card-text">Mobile:<%= t.phone_num %></p>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item">
@@ -12,7 +12,7 @@
   </ul>
   <div class="card-body">
     <%= link_to "修改" , edit_tenant_path(id: 1), class: 'card-link' %>
-      <%= link_to "删除" , tenant_path(id: 1), method: :delete, 'data-confirm'=> '确认要删除吗?', class: 'card-link text-danger' %>
+      <%= link_to "删除" , tenant_path(id: t.id), method: :delete, 'data-confirm'=> '确认要删除吗?', class: 'card-link text-danger' %>
     </div>
 </div>
 <% end %>

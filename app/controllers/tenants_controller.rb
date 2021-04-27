@@ -15,7 +15,7 @@ def create
 
     respond_to do |format|
       if @tenant.save
-        format.html { redirect_to @tenants, notice: "Tenant was successfully created." }
+        format.html { redirect_to tenants_url, notice: "Tenant was successfully created." }
         format.json { render :show, status: :created, location: @tenant }
       else
         format.html { render :new, status: :unprocessable_entity }

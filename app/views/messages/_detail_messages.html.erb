@@ -1,0 +1,31 @@
+<tr>
+    <td>
+        <%= notification.tenant_id %>
+    </td>
+    <td>
+        <%= notification.tenant_name %>
+    </td>
+    <td>
+        <%= notification.phone_num %>
+    </td>
+    <td>
+        <%= notification.title %>
+    </td>
+    <td>
+        <%= notification.content %>
+    </td>
+    <td>
+        <%= notification.receive_id %>
+    </td>
+    <td>
+        <%= notification.create_t.to_date %>
+    </td>
+    <td>
+        <%= link_to 'Show' , notification %>
+    </td>
+
+    <td>
+        <%= link_to 'Destroy' , notification, method: :delete, data: { confirm: 'Are you sure?'
+            } %>
+    </td>
+</tr>
