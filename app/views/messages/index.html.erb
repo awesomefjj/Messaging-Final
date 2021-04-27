@@ -1,8 +1,12 @@
 <h1>Messages</h1>
 <div class="card">
     <div class="card-body">
-        <h4 class="card-title">Messages Center</h4>
-        <h6 class="card-subtitle">消息搜索展示</h6>
+        <div class="d-flex justify-content-between">
+        <div>
+          <h4 class="card-title">Messages Center</h4>
+        </div>
+        <div><%= link_to "新增消息", new_notification_path(tenant_id: params[:tenant_id]), class:"btn btn-outline-light",style:"color:#36bea6; border-color:#36bea6;" %> </div>
+    </div>
         <div class="table-responsive">
             <table class="table">
                 <thead class="text-white" style="background-color: #36bea6;">

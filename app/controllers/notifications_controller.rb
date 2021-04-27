@@ -3,7 +3,7 @@ class NotificationsController < ApplicationController
 
   # GET /notifications or /notifications.json
   def index
-    @notifications = Notification.all
+    @notifications = Notification.all.page(params[:page]).per(15)
   end
 
   # GET /notifications/1 or /notifications/1.json
