@@ -6,14 +6,14 @@
         <%= render 'informations' %>
             
 </div>
-<div class="container d-flex justify-content-between pd-0">
-    <div class="card col-8 mr-4 shadow">
-        <div class="card-title">消息量统计</div>
-        <div>
-            <%= render 'charts' %>
+<div class="container d-flex justify-content-between pt-5" style="padding:0">
+    <div class="card col-8 mr-1 shadow" style="padding:0">
+        <strong class="card-header text-white" style="background-color: #36bea6">消息量统计</strong>
+        <div class="card-body">
+            <canvas id="myChart" width="400" height="150"></canvas>
         </div>
     </div>
-    <div class="card col-4 shadow">
+    <div class="card col-3 shadow" style="padding:0">
         <div class="card-body">
             <span class="d-block font-14 font-weight-500 text-dark">总发送量</span>
             <div class="display-3 font-weight-500 text-dark"><%= @notifications_all.count %></div>
@@ -29,6 +29,31 @@
         Designed and Developed by Jeffery.
     </div>
 </div>
-<div class="chart-area">
-<canvas id="myAreaChart"></canvas>
-</div>
+
+
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    
+    data : {
+    labels: ['Jan','Feb','Mar','Apr','May','June','July','Aug','Sep','Oct','Nov','Dec'],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [650, 590, 800, 810, 560, 550, 415, 880, 440, 660, 450,560],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+},
+    options: {
+        scales: {
+            y: {
+                suggestedMin: 30,
+                suggestedMax: 100,
+                
+            }
+        }
+    }
+});
+</script>
