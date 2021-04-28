@@ -1,20 +1,20 @@
 <%= Gon::Base.render_data %>
-<div class="card rounded border shadow" style="width: 18rem;">
+<div class="card rounded border shadow" style="width: 18rem; background-color: #fff6d4a1">
+    <strong class="card-header text-white" style="background-color: #f19999bf;">本日发送量</strong>
     <div class="card-body">
-        <span class="d-block font-14 font-weight-500 text-dark ">本日发送量</span>
         <div class="display-3 font-weight-500 text-dark"><%= @noti_num_day %></div>
     </div>
 </div>
-<div class="card rounded border shadow" style="width: 18rem;">
+<div class="card rounded border shadow" style="width: 18rem; background-color: #fff6d4a1">
+    <strong class="card-header text-white" style="background-color: #84ccff;">
+        本月发送量</strong>
     <div class="card-body">
-        
-        <span class="d-block font-14 font-weight-500 text-dark">本月发送量</span>
-        <div class="display-3 font-weight-500 text-dark"><%= @noti_num_mon %></div>
+      <div class="display-3 font-weight-500 text-dark"><%= @noti_num_mon %></div>
     </div>
 </div>
-<div class="card rounded border shadow" style="width: 18rem;">
+<div class="card rounded border shadow" style="width: 18rem; background-color: #fff6d4a1">
+    <strong class="card-header text-white" style="background-color: #f8bd73b8;">本年发送量</strong>
     <div class="card-body">
-        <span class="d-block font-14 font-weight-500 text-dark">本年发送量</span>
         <div class="display-3 font-weight-500 text-dark"><%= @noti_num_year %></div>
     </div>
 </div>
