@@ -12,6 +12,14 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import "../bootstrap-uri"
-//import "../demo"
+import "bootstrap"
+import "animate.css"
 
+$(document).ready(function(){
+    $(".shadow").mouseover(function(){
+      $(this).addClass("animate__animated animate__pulse");
+    });
+    $(".shadow").mouseout(function(){
+      $(this).removeClass("animate__animated animate__pulse");
+    });
+  });
