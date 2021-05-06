@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   end
   resources :tenants
   post "tenants/new", to: "tenants#new"
+  
 
   root to: 'dashboards#show'
 end

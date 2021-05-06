@@ -56,3 +56,6 @@ gem 'rabl-rails'
 
 #翻页工具
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
+
+#searching tool
+gem 'ransack'
