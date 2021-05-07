@@ -1,5 +1,6 @@
 <%= Gon::Base.render_data %>
-<canvas id="myChart" width="400" height="150"></canvas>
+<canvas id="myChart" width="400" height="200"></canvas>
+
 <script>
     var xx = [430,340,450,523,500,489,398,425,414,399,450,422];
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -32,4 +33,6 @@
             }
         }
     });
+   
+   
     </script>
