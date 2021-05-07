@@ -1,22 +1,23 @@
 <h1>Messages</h1>
 <div class="card">
-    <div class="card-body">
+    <div class="card-body d-flex justify-content-between">
         <div class="d-flex justify-content-between">
         <div>
           <h4 class="card-title">Messages Center</h4>
         </div>
+        
         <%= search_form_for(@q, url:messages_path) do |f| %>
-        <div class="field">
-            <%= f.label :tenant_name %>
-            <%= f.search_field :tenant_name_cont %>
+        <div class="input-group mb-3">
+            <%= f.search_field :tenant_name_cont, class: "form-control" %>
+        
+        <div class="input-group-append">
+          <%= f.submit class: "btn btn-outline-secondary" %>
         </div>
-        <%= f.submit %>
+       </div>
           <% end %>
-
-          
-           
-           
-    </div>
+        
+        
+      </div>
         <div><%= link_to "新增消息", new_notification_path(tenant_id: params[:tenant_id]), class:"btn btn-outline-light",style:"color:#36bea6; border-color:#36bea6;" %> </div>
     </div>
         <div class="table-responsive">

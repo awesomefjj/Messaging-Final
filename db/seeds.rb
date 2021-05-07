@@ -6,17 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-50.times do |i|
+72.times do |i|
     Notification.create(tenant_id: "5", tenant_name: "wxm", phone_num: "18265928047", title: "Test #{rand(9999)}",
-     content: "Ohhhhhhhh! David Heinemeier Hasson and this is test #{rand(9999)}", receive_id: "2", create_t: Time.new(2020, 4, 22, 14, 35, 0 ))
+     content: "Ohhhhhhhh! David Heinemeier Hasson and this is test #{rand(9999)}", receive_id: "2", create_t: Time.new(2021, 5, 22, 14, 35, 0 ))
 end
 
-50.times do |t|
+59.times do |t|
     Notification.create(tenant_id: "2", tenant_name: "ys", phone_num: "18322285192", title: "Test #{rand(9999)}",
-     content: "Ohhhhhhhh! David Heinemeier Hasson and this is test #{rand(9999)}", receive_id: "1", create_t: Time.new(2021, 9, 22, 14, 35, 0 ))
+     content: "Ohhhhhhhh! David Heinemeier Hasson and this is test #{rand(9999)}", receive_id: "1", create_t: Time.new(2021, 10, 22, 14, 35, 0 ))
 end
 
-50.times do |e|
-    Notification.create(tenant_id: "4", tenant_name: "stt", phone_num: "18385550258", title: "Test #{rand(9999)}",
-     content: "Ohhhhhhhh! David Heinemeier Hasson and this is test #{rand(9999)}", receive_id: "1", create_t: Time.new(2021, 11, 14, 14, 35, 0 ))
+66.times do |e|
+    Notification.create(tenant_id: "2", tenant_name: "ys", phone_num: "18322285192", title: "Test #{rand(9999)}",
+     content: "Ohhhhhhhh! David Heinemeier Hasson and this is test #{rand(9999)}", receive_id: "1", create_t: Time.new(2021, 12, 3, 14, 35, 0 ))
 end
